@@ -112,9 +112,10 @@ nav .nav-book:active { background: #fff; }
 .rail button span { display: block; margin-top: 8px; font-family: var(--display); font-stretch: 100%; font-weight: 600; font-size: .9rem; }
 
 /* About Bakar */
-.about { display: grid; row-gap: 40px; align-items: center; padding: clamp(64px, 9vw, 120px) var(--g); }
+.about { display: grid; row-gap: 40px; align-items: center; justify-items: center; text-align: center; padding: clamp(64px, 9vw, 120px) var(--g); }
 .about-photo { width: 100%; height: auto; max-width: 22rem; aspect-ratio: 4 / 3; object-fit: cover; object-position: 50% 25%; }
 .about-copy h2 { font-size: clamp(2.6rem, 5.4vw, 5.4rem); margin-bottom: 28px; }
+.about-copy p { margin-inline: auto; }
 .about-copy p + p { margin-top: 1em; }
 
 /* Islands: four names, set big */
@@ -240,9 +241,10 @@ footer { background: var(--ink); color: var(--paper); }
 
 /* Tablet */
 @media (min-width: 801px) {
-  .about { grid-template-columns: repeat(12, 1fr); column-gap: 24px; }
+  .about { grid-template-columns: repeat(12, 1fr); column-gap: 24px; justify-items: stretch; text-align: left; }
   .about-photo { grid-column: 1 / 6; max-width: none; aspect-ratio: auto; align-self: stretch; height: auto; max-height: 36rem; }
   .about-copy { grid-column: 7 / 13; }
+  .about-copy p { margin-inline: 0; }
 }
 @media (min-width: 901px) {
   body { font-size: 1.1875rem; }
